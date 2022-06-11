@@ -24,6 +24,9 @@ Partial Class ciudadanos
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ciudadanos))
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.btnNacionalidad = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnLugarDeVotacion = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnLugarNacimiento = New Guna.UI2.WinForms.Guna2Button()
         Me.Salir = New Guna.UI2.WinForms.Guna2Button()
         Me.GUARDAR = New Guna.UI2.WinForms.Guna2Button()
         Me.FOTO = New System.Windows.Forms.PictureBox()
@@ -54,6 +57,9 @@ Partial Class ciudadanos
         Me.NOMBRECOMPLETO = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.GBLUGARDENACIMIENTO = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.CBLUGARDENACIMIENTO = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.BTNCBLUGARNACIMIENTO = New Guna.UI2.WinForms.Guna2Button()
         Me.ABRIR = New System.Windows.Forms.OpenFileDialog()
         Me.L = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -62,12 +68,32 @@ Partial Class ciudadanos
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.BUSCANDO = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.GBLUGARDEVOTACION = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.btnGuardarLugarVotacion = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnSeleccionarDistrito = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnSeleccionarCanton = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnSeleccionarProvincia = New Guna.UI2.WinForms.Guna2Button()
+        Me.CBDISTRITO = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.CBCANTON = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.CBPROVINCIA = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.GBNACIONALIDAD = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.CBNACIONALIDAD = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.BtnSeleccionarNacionalidad = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2GroupBox1.SuspendLayout()
         CType(Me.FOTO, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GBLUGARDENACIMIENTO.SuspendLayout()
+        Me.GBLUGARDEVOTACION.SuspendLayout()
+        Me.GBNACIONALIDAD.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2GroupBox1
         '
+        Me.Guna2GroupBox1.Controls.Add(Me.btnNacionalidad)
+        Me.Guna2GroupBox1.Controls.Add(Me.btnLugarDeVotacion)
+        Me.Guna2GroupBox1.Controls.Add(Me.btnLugarNacimiento)
         Me.Guna2GroupBox1.Controls.Add(Me.Salir)
         Me.Guna2GroupBox1.Controls.Add(Me.GUARDAR)
         Me.Guna2GroupBox1.Controls.Add(Me.FOTO)
@@ -102,9 +128,51 @@ Partial Class ciudadanos
         Me.Guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.Guna2GroupBox1.Location = New System.Drawing.Point(136, 12)
         Me.Guna2GroupBox1.Name = "Guna2GroupBox1"
-        Me.Guna2GroupBox1.Size = New System.Drawing.Size(813, 485)
+        Me.Guna2GroupBox1.Size = New System.Drawing.Size(825, 485)
         Me.Guna2GroupBox1.TabIndex = 2
         Me.Guna2GroupBox1.Text = "Ingrese un ciudadano"
+        '
+        'btnNacionalidad
+        '
+        Me.btnNacionalidad.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnNacionalidad.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnNacionalidad.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnNacionalidad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnNacionalidad.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnNacionalidad.ForeColor = System.Drawing.Color.White
+        Me.btnNacionalidad.Location = New System.Drawing.Point(750, 124)
+        Me.btnNacionalidad.Name = "btnNacionalidad"
+        Me.btnNacionalidad.Size = New System.Drawing.Size(46, 24)
+        Me.btnNacionalidad.TabIndex = 122
+        Me.btnNacionalidad.Text = "..."
+        '
+        'btnLugarDeVotacion
+        '
+        Me.btnLugarDeVotacion.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnLugarDeVotacion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnLugarDeVotacion.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnLugarDeVotacion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnLugarDeVotacion.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnLugarDeVotacion.ForeColor = System.Drawing.Color.White
+        Me.btnLugarDeVotacion.Location = New System.Drawing.Point(750, 163)
+        Me.btnLugarDeVotacion.Name = "btnLugarDeVotacion"
+        Me.btnLugarDeVotacion.Size = New System.Drawing.Size(46, 97)
+        Me.btnLugarDeVotacion.TabIndex = 121
+        Me.btnLugarDeVotacion.Text = "..."
+        '
+        'btnLugarNacimiento
+        '
+        Me.btnLugarNacimiento.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnLugarNacimiento.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnLugarNacimiento.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnLugarNacimiento.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnLugarNacimiento.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnLugarNacimiento.ForeColor = System.Drawing.Color.White
+        Me.btnLugarNacimiento.Location = New System.Drawing.Point(750, 87)
+        Me.btnLugarNacimiento.Name = "btnLugarNacimiento"
+        Me.btnLugarNacimiento.Size = New System.Drawing.Size(46, 24)
+        Me.btnLugarNacimiento.TabIndex = 119
+        Me.btnLugarNacimiento.Text = "..."
         '
         'Salir
         '
@@ -310,10 +378,10 @@ Partial Class ciudadanos
         Me.IDNACIMIENTO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.IDNACIMIENTO.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.IDNACIMIENTO.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.IDNACIMIENTO.Location = New System.Drawing.Point(556, 88)
+        Me.IDNACIMIENTO.Location = New System.Drawing.Point(556, 89)
         Me.IDNACIMIENTO.Name = "IDNACIMIENTO"
         Me.IDNACIMIENTO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.IDNACIMIENTO.PlaceholderText = "Nombre Completo"
+        Me.IDNACIMIENTO.PlaceholderText = "Lugar De Nacimiento"
         Me.IDNACIMIENTO.SelectedText = ""
         Me.IDNACIMIENTO.Size = New System.Drawing.Size(188, 23)
         Me.IDNACIMIENTO.TabIndex = 103
@@ -546,6 +614,49 @@ Partial Class ciudadanos
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Identificacion:"
         '
+        'GBLUGARDENACIMIENTO
+        '
+        Me.GBLUGARDENACIMIENTO.Controls.Add(Me.CBLUGARDENACIMIENTO)
+        Me.GBLUGARDENACIMIENTO.Controls.Add(Me.BTNCBLUGARNACIMIENTO)
+        Me.GBLUGARDENACIMIENTO.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.GBLUGARDENACIMIENTO.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.GBLUGARDENACIMIENTO.Location = New System.Drawing.Point(71, 133)
+        Me.GBLUGARDENACIMIENTO.Name = "GBLUGARDENACIMIENTO"
+        Me.GBLUGARDENACIMIENTO.Size = New System.Drawing.Size(465, 168)
+        Me.GBLUGARDENACIMIENTO.TabIndex = 118
+        Me.GBLUGARDENACIMIENTO.Text = "Lugar de Nacimiento"
+        Me.GBLUGARDENACIMIENTO.Visible = False
+        '
+        'CBLUGARDENACIMIENTO
+        '
+        Me.CBLUGARDENACIMIENTO.BackColor = System.Drawing.Color.Transparent
+        Me.CBLUGARDENACIMIENTO.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CBLUGARDENACIMIENTO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CBLUGARDENACIMIENTO.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CBLUGARDENACIMIENTO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CBLUGARDENACIMIENTO.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.CBLUGARDENACIMIENTO.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CBLUGARDENACIMIENTO.ItemHeight = 30
+        Me.CBLUGARDENACIMIENTO.Location = New System.Drawing.Point(80, 81)
+        Me.CBLUGARDENACIMIENTO.Name = "CBLUGARDENACIMIENTO"
+        Me.CBLUGARDENACIMIENTO.Size = New System.Drawing.Size(140, 36)
+        Me.CBLUGARDENACIMIENTO.TabIndex = 2
+        '
+        'BTNCBLUGARNACIMIENTO
+        '
+        Me.BTNCBLUGARNACIMIENTO.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTNCBLUGARNACIMIENTO.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTNCBLUGARNACIMIENTO.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTNCBLUGARNACIMIENTO.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNCBLUGARNACIMIENTO.Enabled = False
+        Me.BTNCBLUGARNACIMIENTO.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BTNCBLUGARNACIMIENTO.ForeColor = System.Drawing.Color.White
+        Me.BTNCBLUGARNACIMIENTO.Location = New System.Drawing.Point(244, 77)
+        Me.BTNCBLUGARNACIMIENTO.Name = "BTNCBLUGARNACIMIENTO"
+        Me.BTNCBLUGARNACIMIENTO.Size = New System.Drawing.Size(180, 45)
+        Me.BTNCBLUGARNACIMIENTO.TabIndex = 1
+        Me.BTNCBLUGARNACIMIENTO.Text = "Elegir"
+        '
         'ABRIR
         '
         Me.ABRIR.Filter = "IMAGENES | *.jpg;*.mbp;*.jpeg"
@@ -616,20 +727,225 @@ Partial Class ciudadanos
         Me.Label15.TabIndex = 6
         Me.Label15.Text = "Nombre por buscar"
         '
+        'GBLUGARDEVOTACION
+        '
+        Me.GBLUGARDEVOTACION.Controls.Add(Me.btnGuardarLugarVotacion)
+        Me.GBLUGARDEVOTACION.Controls.Add(Me.btnSeleccionarDistrito)
+        Me.GBLUGARDEVOTACION.Controls.Add(Me.btnSeleccionarCanton)
+        Me.GBLUGARDEVOTACION.Controls.Add(Me.btnSeleccionarProvincia)
+        Me.GBLUGARDEVOTACION.Controls.Add(Me.CBDISTRITO)
+        Me.GBLUGARDEVOTACION.Controls.Add(Me.CBCANTON)
+        Me.GBLUGARDEVOTACION.Controls.Add(Me.CBPROVINCIA)
+        Me.GBLUGARDEVOTACION.Controls.Add(Me.Label18)
+        Me.GBLUGARDEVOTACION.Controls.Add(Me.Label17)
+        Me.GBLUGARDEVOTACION.Controls.Add(Me.Label16)
+        Me.GBLUGARDEVOTACION.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.GBLUGARDEVOTACION.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.GBLUGARDEVOTACION.Location = New System.Drawing.Point(17, 54)
+        Me.GBLUGARDEVOTACION.Name = "GBLUGARDEVOTACION"
+        Me.GBLUGARDEVOTACION.Size = New System.Drawing.Size(519, 260)
+        Me.GBLUGARDEVOTACION.TabIndex = 120
+        Me.GBLUGARDEVOTACION.Text = "Lugar de votacion"
+        Me.GBLUGARDEVOTACION.Visible = False
+        '
+        'btnGuardarLugarVotacion
+        '
+        Me.btnGuardarLugarVotacion.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnGuardarLugarVotacion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnGuardarLugarVotacion.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnGuardarLugarVotacion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnGuardarLugarVotacion.Enabled = False
+        Me.btnGuardarLugarVotacion.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnGuardarLugarVotacion.ForeColor = System.Drawing.Color.White
+        Me.btnGuardarLugarVotacion.Location = New System.Drawing.Point(161, 212)
+        Me.btnGuardarLugarVotacion.Name = "btnGuardarLugarVotacion"
+        Me.btnGuardarLugarVotacion.Size = New System.Drawing.Size(180, 45)
+        Me.btnGuardarLugarVotacion.TabIndex = 9
+        Me.btnGuardarLugarVotacion.Text = "Guardar"
+        '
+        'btnSeleccionarDistrito
+        '
+        Me.btnSeleccionarDistrito.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnSeleccionarDistrito.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnSeleccionarDistrito.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnSeleccionarDistrito.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnSeleccionarDistrito.Enabled = False
+        Me.btnSeleccionarDistrito.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnSeleccionarDistrito.ForeColor = System.Drawing.Color.White
+        Me.btnSeleccionarDistrito.Location = New System.Drawing.Point(289, 162)
+        Me.btnSeleccionarDistrito.Name = "btnSeleccionarDistrito"
+        Me.btnSeleccionarDistrito.Size = New System.Drawing.Size(179, 36)
+        Me.btnSeleccionarDistrito.TabIndex = 8
+        Me.btnSeleccionarDistrito.Text = "Distrito"
+        '
+        'btnSeleccionarCanton
+        '
+        Me.btnSeleccionarCanton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnSeleccionarCanton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnSeleccionarCanton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnSeleccionarCanton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnSeleccionarCanton.Enabled = False
+        Me.btnSeleccionarCanton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnSeleccionarCanton.ForeColor = System.Drawing.Color.White
+        Me.btnSeleccionarCanton.Location = New System.Drawing.Point(289, 111)
+        Me.btnSeleccionarCanton.Name = "btnSeleccionarCanton"
+        Me.btnSeleccionarCanton.Size = New System.Drawing.Size(179, 36)
+        Me.btnSeleccionarCanton.TabIndex = 7
+        Me.btnSeleccionarCanton.Text = "Canton"
+        '
+        'btnSeleccionarProvincia
+        '
+        Me.btnSeleccionarProvincia.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnSeleccionarProvincia.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnSeleccionarProvincia.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnSeleccionarProvincia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnSeleccionarProvincia.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnSeleccionarProvincia.ForeColor = System.Drawing.Color.White
+        Me.btnSeleccionarProvincia.Location = New System.Drawing.Point(289, 64)
+        Me.btnSeleccionarProvincia.Name = "btnSeleccionarProvincia"
+        Me.btnSeleccionarProvincia.Size = New System.Drawing.Size(179, 36)
+        Me.btnSeleccionarProvincia.TabIndex = 6
+        Me.btnSeleccionarProvincia.Text = "Provincia"
+        '
+        'CBDISTRITO
+        '
+        Me.CBDISTRITO.BackColor = System.Drawing.Color.Transparent
+        Me.CBDISTRITO.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CBDISTRITO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CBDISTRITO.Enabled = False
+        Me.CBDISTRITO.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CBDISTRITO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CBDISTRITO.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.CBDISTRITO.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CBDISTRITO.ItemHeight = 30
+        Me.CBDISTRITO.Location = New System.Drawing.Point(133, 162)
+        Me.CBDISTRITO.Name = "CBDISTRITO"
+        Me.CBDISTRITO.Size = New System.Drawing.Size(140, 36)
+        Me.CBDISTRITO.TabIndex = 5
+        '
+        'CBCANTON
+        '
+        Me.CBCANTON.BackColor = System.Drawing.Color.Transparent
+        Me.CBCANTON.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CBCANTON.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CBCANTON.Enabled = False
+        Me.CBCANTON.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CBCANTON.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CBCANTON.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.CBCANTON.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CBCANTON.ItemHeight = 30
+        Me.CBCANTON.Location = New System.Drawing.Point(133, 111)
+        Me.CBCANTON.Name = "CBCANTON"
+        Me.CBCANTON.Size = New System.Drawing.Size(140, 36)
+        Me.CBCANTON.TabIndex = 4
+        '
+        'CBPROVINCIA
+        '
+        Me.CBPROVINCIA.BackColor = System.Drawing.Color.Transparent
+        Me.CBPROVINCIA.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CBPROVINCIA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CBPROVINCIA.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CBPROVINCIA.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CBPROVINCIA.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.CBPROVINCIA.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CBPROVINCIA.ItemHeight = 30
+        Me.CBPROVINCIA.Location = New System.Drawing.Point(133, 64)
+        Me.CBPROVINCIA.Name = "CBPROVINCIA"
+        Me.CBPROVINCIA.Size = New System.Drawing.Size(140, 36)
+        Me.CBPROVINCIA.TabIndex = 3
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(52, 176)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(45, 15)
+        Me.Label18.TabIndex = 2
+        Me.Label18.Text = "Distrito"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(52, 123)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(46, 15)
+        Me.Label17.TabIndex = 1
+        Me.Label17.Text = "Canton"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(52, 77)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(56, 15)
+        Me.Label16.TabIndex = 0
+        Me.Label16.Text = "Provincia"
+        '
+        'GBNACIONALIDAD
+        '
+        Me.GBNACIONALIDAD.Controls.Add(Me.CBNACIONALIDAD)
+        Me.GBNACIONALIDAD.Controls.Add(Me.BtnSeleccionarNacionalidad)
+        Me.GBNACIONALIDAD.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.GBNACIONALIDAD.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.GBNACIONALIDAD.Location = New System.Drawing.Point(54, 23)
+        Me.GBNACIONALIDAD.Name = "GBNACIONALIDAD"
+        Me.GBNACIONALIDAD.Size = New System.Drawing.Size(465, 168)
+        Me.GBNACIONALIDAD.TabIndex = 119
+        Me.GBNACIONALIDAD.Text = "NACIONALIDAD"
+        Me.GBNACIONALIDAD.Visible = False
+        '
+        'CBNACIONALIDAD
+        '
+        Me.CBNACIONALIDAD.BackColor = System.Drawing.Color.Transparent
+        Me.CBNACIONALIDAD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CBNACIONALIDAD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CBNACIONALIDAD.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CBNACIONALIDAD.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CBNACIONALIDAD.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.CBNACIONALIDAD.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CBNACIONALIDAD.ItemHeight = 30
+        Me.CBNACIONALIDAD.Location = New System.Drawing.Point(80, 81)
+        Me.CBNACIONALIDAD.Name = "CBNACIONALIDAD"
+        Me.CBNACIONALIDAD.Size = New System.Drawing.Size(140, 36)
+        Me.CBNACIONALIDAD.TabIndex = 2
+        '
+        'BtnSeleccionarNacionalidad
+        '
+        Me.BtnSeleccionarNacionalidad.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BtnSeleccionarNacionalidad.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BtnSeleccionarNacionalidad.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BtnSeleccionarNacionalidad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BtnSeleccionarNacionalidad.Enabled = False
+        Me.BtnSeleccionarNacionalidad.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnSeleccionarNacionalidad.ForeColor = System.Drawing.Color.White
+        Me.BtnSeleccionarNacionalidad.Location = New System.Drawing.Point(244, 77)
+        Me.BtnSeleccionarNacionalidad.Name = "BtnSeleccionarNacionalidad"
+        Me.BtnSeleccionarNacionalidad.Size = New System.Drawing.Size(180, 45)
+        Me.BtnSeleccionarNacionalidad.TabIndex = 1
+        Me.BtnSeleccionarNacionalidad.Text = "Elegir"
+        '
         'ciudadanos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1249, 538)
+        Me.ClientSize = New System.Drawing.Size(1299, 556)
+        Me.Controls.Add(Me.GBNACIONALIDAD)
         Me.Controls.Add(Me.L)
+        Me.Controls.Add(Me.GBLUGARDEVOTACION)
+        Me.Controls.Add(Me.GBLUGARDENACIMIENTO)
         Me.Controls.Add(Me.BUSCANDO)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Guna2GroupBox1)
+        Me.KeyPreview = True
         Me.Name = "ciudadanos"
         Me.Text = "ciudadanos"
         Me.Guna2GroupBox1.ResumeLayout(False)
         Me.Guna2GroupBox1.PerformLayout()
         CType(Me.FOTO, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GBLUGARDENACIMIENTO.ResumeLayout(False)
+        Me.GBLUGARDEVOTACION.ResumeLayout(False)
+        Me.GBLUGARDEVOTACION.PerformLayout()
+        Me.GBNACIONALIDAD.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -649,7 +965,6 @@ Partial Class ciudadanos
     Friend WithEvents Label11 As Label
     Friend WithEvents IDNACIONALIDAD As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents IDNACIMIENTO As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents NOMBREMADRE As Guna.UI2.WinForms.Guna2TextBox
@@ -674,4 +989,25 @@ Partial Class ciudadanos
     Friend WithEvents ColumnHeader4 As ColumnHeader
     Friend WithEvents BUSCANDO As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label15 As Label
+    Friend WithEvents IDNACIMIENTO As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents GBLUGARDENACIMIENTO As Guna.UI2.WinForms.Guna2GroupBox
+    Friend WithEvents CBLUGARDENACIMIENTO As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents BTNCBLUGARNACIMIENTO As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnLugarNacimiento As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnLugarDeVotacion As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents GBLUGARDEVOTACION As Guna.UI2.WinForms.Guna2GroupBox
+    Friend WithEvents btnSeleccionarDistrito As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnSeleccionarCanton As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnSeleccionarProvincia As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents CBDISTRITO As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents CBCANTON As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents CBPROVINCIA As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents btnGuardarLugarVotacion As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnNacionalidad As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents GBNACIONALIDAD As Guna.UI2.WinForms.Guna2GroupBox
+    Friend WithEvents CBNACIONALIDAD As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents BtnSeleccionarNacionalidad As Guna.UI2.WinForms.Guna2Button
 End Class
