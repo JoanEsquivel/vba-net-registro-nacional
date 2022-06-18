@@ -96,41 +96,38 @@ Module CONEXION
 
     Friend Sub REFRESCAR(ByRef L As ListView, ByVal SQL As String, ByVal CAMPOS As Integer)
         Dim J As Integer
-        Dim IdProvinciaElegida As Integer
-        Dim ProvinciaEligida As String
-        Dim SQLProvincia As String
+        Dim IdLugarDeNacimiento, IdNacionalidad, IdProvinciaElegida, IdCantonElegido, IdDistritoElegido As Integer
+        Dim LugarDeNacimientoElegido, NacionalidadElegida, ProvinciaEligida, CantonElegido, DistritoElegido As String
         T.Tables.Clear()
-
         L.Items.Clear()
-
         CARGAR_TABLA(T, SQL)
-
         If T.Tables(0).Rows.Count > 0 Then
             For I = 0 To T.Tables(0).Rows.Count - 1
                 L.Items.Add(T.Tables(0).Rows(I).Item(0))
                 For J = 1 To CAMPOS - 1
-                    'If (J <> 2 And J <> 5 And J <> 7 And J <> 12) Then
-                    '    L.Columns(J).Width = 0
-                    'End If
-                    If (J = 12) Then
-
+                    If (J = 10) Then
+                        IdLugarDeNacimiento = T.Tables(0).Rows(I).Item(J)
+                        LugarDeNacimientoElegido = convertirIDEnTexto("LUGARDENACIMIENTO", "LUGARDENACIMIENTO", "IDNACIMIENTO", IdLugarDeNacimiento)
+                        L.Items(L.Items.Count - 1).SubItems.Add(LugarDeNacimientoElegido)
+                    ElseIf (J = 11) Then
+                        IdNacionalidad = T.Tables(0).Rows(I).Item(J)
+                        NacionalidadElegida = convertirIDEnTexto("NACIONALIDAD", "NACIONALIDAD", "IDNACIONALIDAD", IdNacionalidad)
+                        L.Items(L.Items.Count - 1).SubItems.Add(NacionalidadElegida)
+                    ElseIf (J = 12) Then
                         IdProvinciaElegida = T.Tables(0).Rows(I).Item(J)
-
-                        'Obtener ID Provincia
-                        T2.Tables.Clear()
-                        SQLProvincia = "SELECT PROVINCIA from PROVINCIA WHERE IDPROVINCIA = " & IdProvinciaElegida & ""
-                        CARGAR_TABLA(T2, SQLProvincia)
-                        If T.Tables(0).Rows.Count > 0 Then
-                            ProvinciaEligida = T2.Tables(0).Rows(0).ItemArray(0)
-                        End If
-
+                        ProvinciaEligida = convertirIDEnTexto("PROVINCIA", "PROVINCIA", "IDPROVINCIA", IdProvinciaElegida)
                         L.Items(L.Items.Count - 1).SubItems.Add(ProvinciaEligida)
+                    ElseIf (J = 13) Then
+                        IdCantonElegido = T.Tables(0).Rows(I).Item(J)
+                        CantonElegido = convertirIDEnTexto("CANTON", "CANTON", "IDCANTON", IdCantonElegido)
+                        L.Items(L.Items.Count - 1).SubItems.Add(CantonElegido)
+                    ElseIf (J = 14) Then
+                        IdDistritoElegido = T.Tables(0).Rows(I).Item(J)
+                        DistritoElegido = convertirIDEnTexto("DISTRITO", "DISTRITO", "IDDISTRITO", IdDistritoElegido)
+                        L.Items(L.Items.Count - 1).SubItems.Add(DistritoElegido)
                     Else
                         L.Items(L.Items.Count - 1).SubItems.Add(T.Tables(0).Rows(I).Item(J))
                     End If
-
-                    'https://stackoverflow.com/questions/6233625/vb-net-adding-items-to-a-listview-along-with-tag-property
-                    'L.Items(L.Items.Count - 1).SubItems.Add(T.Tables(0).Rows(I).Item(J)).Tag
                 Next
             Next
             L.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent)
@@ -146,6 +143,22 @@ Module CONEXION
             L.Columns(11).Width = 0
             L.Columns(13).Width = 0
             L.Columns(14).Width = 0
+
         End If
     End Sub
+
+    Public Function convertirIDEnTexto(ByVal ValorTexto As String, ByVal nombreDeLaTabla As String, ByVal IdAConvertir As String, ByVal ValorID As String) As String
+        Dim text As String
+
+        T2.Tables.Clear()
+        SQL = "SELECT " & ValorTexto & " FROM " & nombreDeLaTabla & " WHERE " & IdAConvertir & " = " & ValorID & ""
+        CARGAR_TABLA(T2, SQL)
+        If (T2.Tables(0).Rows.Count > 0) Then
+            For I = 0 To T2.Tables(0).Rows.Count - 1
+                text = T2.Tables(0).Rows(I).Item(0)
+            Next
+        End If
+
+        Return text
+    End Function
 End Module

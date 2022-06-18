@@ -30,4 +30,8 @@
     Private Sub DISTRITO_TextChanged(sender As Object, e As EventArgs) Handles DISTRITO.TextChanged
         validarDatos()
     End Sub
+
+    Private Sub distritos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.MdiParent = MDIMain
+    End Sub
 End Class

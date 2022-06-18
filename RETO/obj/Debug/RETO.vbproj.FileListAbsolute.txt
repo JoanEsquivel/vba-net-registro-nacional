@@ -14,8 +14,8 @@ C:\Users\JoanPC\source\repos\RETOFINAL\RETO\obj\Debug\RETO.xml
 C:\Users\JoanPC\source\repos\RETOFINAL\RETO\obj\Debug\RETO.pdb
 C:\Users\JoanPC\source\repos\RETOFINAL\RETO\obj\Debug\RETO.ciudadanos.resources
 C:\Users\JoanPC\source\repos\RETOFINAL\RETO\obj\Debug\RETO.lugaresdenacimiento.resources
-C:\Users\JoanPC\source\repos\RETOFINAL\RETO\obj\Debug\RETO.main.resources
 C:\Users\JoanPC\source\repos\RETOFINAL\RETO\obj\Debug\RETO.nacionalidades.resources
 C:\Users\JoanPC\source\repos\RETOFINAL\RETO\obj\Debug\RETO.cantones.resources
 C:\Users\JoanPC\source\repos\RETOFINAL\RETO\obj\Debug\RETO.distritos.resources
 C:\Users\JoanPC\source\repos\RETOFINAL\RETO\obj\Debug\RETO.provincias.resources
+C:\Users\JoanPC\source\repos\RETOFINAL\RETO\obj\Debug\RETO.MDIMain.resources

@@ -19,4 +19,8 @@
     Private Sub PROVINCIA_TextChanged(sender As Object, e As EventArgs) Handles PROVINCIA.TextChanged
         validarDatos()
     End Sub
+
+    Private Sub provincias_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.MdiParent = MDIMain
+    End Sub
 End Class

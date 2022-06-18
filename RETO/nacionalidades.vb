@@ -19,4 +19,8 @@
     Private Sub NACIONALIDAD_TextChanged(sender As Object, e As EventArgs) Handles NACIONALIDAD.TextChanged
         validarDatos()
     End Sub
+
+    Private Sub nacionalidades_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.MdiParent = MDIMain
+    End Sub
 End Class

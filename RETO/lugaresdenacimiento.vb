@@ -21,4 +21,8 @@
     Private Sub LUGARDENACIMIENTO_TextChanged(sender As Object, e As EventArgs) Handles LUGARDENACIMIENTO.TextChanged
         validarDatos()
     End Sub
+
+    Private Sub lugaresdenacimiento_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.MdiParent = MDIMain
+    End Sub
 End Class
