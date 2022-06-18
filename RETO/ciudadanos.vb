@@ -1,5 +1,6 @@
 ﻿Public Class ciudadanos
     Dim DirFoto As String = ""
+
     Dim LugarNacimientoElegida = "", ProvinciaElegida = "", CantonElegido = "", DistritoElegido = "", NacionalidadElegida = ""
     Dim IdProvinciaEligda = 0, IdCantonElegido = 0, IdDistritoElegido = 0
     Friend Sub ValidarLleno()
@@ -12,8 +13,11 @@
 
     Friend Sub limpiar()
         IDENTIFICACION.Clear()
+        IDENTIFICACION.Text = 0
+        IDENTIFICACION.Tag = 0
         NOMBRECOMPLETO.Clear()
         FOTO.Image = My.Resources.USER
+        REFRESCAR(L, "SELECT ID, IDENTIFICACION, NOMBRECOMPLETO, CONOCIDOCOMO, IDENTIFICACIONPADRE, NOMBREPADRE, IDENTIFICACIONMADRE, NOMBREMADRE, FECHANACIMIENTO, FOTO, IDNACIMIENTO, IDNACIONALIDAD, IDPROVINCIA, IDCANTON, IDDISTRITO  FROM CIUDADANOS", 15)
     End Sub
 
     Friend Sub llenarLugaresDeNacimiento()
@@ -50,6 +54,20 @@
         If (T.Tables(0).Rows.Count > 0) Then
             For I = 0 To T.Tables(0).Rows.Count - 1
                 CBPROVINCIA.Items.Add(T.Tables(0).Rows(I).Item(0))
+
+            Next
+        End If
+    End Sub
+
+    Friend Sub LlenarProvinciasBusqueda()
+        CBBUSQUEDAPROVINCIA.Items.Clear()
+        T.Tables.Clear()
+        SQL = "SELECT PROVINCIA FROM PROVINCIA"
+        CARGAR_TABLA(T, SQL)
+        If (T.Tables(0).Rows.Count > 0) Then
+            For I = 0 To T.Tables(0).Rows.Count - 1
+                CBBUSQUEDAPROVINCIA.Items.Add(T.Tables(0).Rows(I).Item(0))
+
             Next
         End If
     End Sub
@@ -76,11 +94,27 @@
         End If
     End Sub
     Private Sub ciudadanos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        limpiar()
+        LlenarProvinciasBusqueda()
     End Sub
 
+    Public Function convertirTextoEnID(ByVal idAObtener As String, ByVal nombreDeLaTabla As String, ByVal NombreDeLaColumnaAConvertir As String, ByVal ValorDeLaColumna As String) As Integer
+        Dim id As Integer
+
+        T.Tables.Clear()
+        SQL = "SELECT " & idAObtener & " FROM " & nombreDeLaTabla & " WHERE " & NombreDeLaColumnaAConvertir & " = '" & ValorDeLaColumna & "'"
+        CARGAR_TABLA(T, SQL)
+        If (T.Tables(0).Rows.Count > 0) Then
+            For I = 0 To T.Tables(0).Rows.Count - 1
+                id = T.Tables(0).Rows(I).Item(0)
+            Next
+        End If
+
+        Return id
+    End Function
+
     Private Sub Salir_Click(sender As Object, e As EventArgs) Handles Salir.Click
-        End
+        Me.Close()
     End Sub
 
     Private Sub FOTO_Click(sender As Object, e As EventArgs) Handles FOTO.Click
@@ -171,6 +205,42 @@
         GBNACIONALIDAD.Visible = False
     End Sub
 
+    Private Sub BUSCANDO_TextChanged(sender As Object, e As EventArgs) Handles BUSCANDO.TextChanged
+        REFRESCAR(L, "SELECT ID, IDENTIFICACION, NOMBRECOMPLETO, CONOCIDOCOMO, IDENTIFICACIONPADRE, NOMBREPADRE, IDENTIFICACIONMADRE, NOMBREMADRE, FECHANACIMIENTO, FOTO, IDNACIMIENTO, IDNACIONALIDAD, IDPROVINCIA, IDCANTON, IDDISTRITO  FROM CIUDADANOS WHERE NOMBRECOMPLETO LIKE '" & BUSCANDO.Text & "%'", 15)
+    End Sub
+
+    Friend Sub L_SelectedIndexChanged(sender As Object, e As EventArgs) Handles L.SelectedIndexChanged
+        If (L.SelectedItems.Count > 0) Then
+            IDENTIFICACION.Text = L.SelectedItems(0).SubItems(1).Text
+            NOMBRECOMPLETO.Text = L.SelectedItems(0).SubItems(2).Text
+            CONOCIDOCOMO.Text = L.SelectedItems(0).SubItems(3).Text
+            IDENTIFICACIONPADRE.Text = L.SelectedItems(0).SubItems(4).Text
+            NOMBREDELPADRE.Text = L.SelectedItems(0).SubItems(5).Text
+            IDENTIFICACIONMADRE.Text = L.SelectedItems(0).SubItems(6).Text
+            NOMBREMADRE.Text = L.SelectedItems(0).SubItems(7).Text
+            FECHANACIMIENTO.Text = L.SelectedItems(0).SubItems(8).Text
+            FOTO.Image = Image.FromFile(L.SelectedItems(0).SubItems(9).Text)
+            DirFoto = L.SelectedItems(0).SubItems(9).Text
+            IDNACIMIENTO.Text = L.SelectedItems(0).SubItems(10).Text
+            IDNACIONALIDAD.Text = L.SelectedItems(0).SubItems(11).Text
+            IDPROVINCIA.Text = L.SelectedItems(0).SubItems(12).Text
+            IDCANTON.Text = L.SelectedItems(0).SubItems(13).Text
+            IDDISTRITO.Text = L.SelectedItems(0).SubItems(14).Text
+
+
+
+
+        End If
+    End Sub
+
+    Private Sub Guna2TextBox1_TextChanged(sender As Object, e As EventArgs) Handles Guna2TextBox1.TextChanged
+        REFRESCAR(L, "SELECT ID, IDENTIFICACION, NOMBRECOMPLETO, CONOCIDOCOMO, IDENTIFICACIONPADRE, NOMBREPADRE, IDENTIFICACIONMADRE, NOMBREMADRE, FECHANACIMIENTO, FOTO, IDNACIMIENTO, IDNACIONALIDAD, IDPROVINCIA, IDCANTON, IDDISTRITO  FROM CIUDADANOS WHERE NOMBREMADRE = '" & Guna2TextBox1.Text & "' OR NOMBREPADRE = '" & Guna2TextBox1.Text & "'", 15)
+    End Sub
+
+    Private Sub CBBUSQUEDAPROVINCIA_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBBUSQUEDAPROVINCIA.SelectedIndexChanged
+
+    End Sub
+
     Private Sub CBNACIONALIDAD_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBNACIONALIDAD.SelectedIndexChanged
         If (CBNACIONALIDAD.Text <> "") Then
 
@@ -178,6 +248,22 @@
         Else
             BtnSeleccionarNacionalidad.Enabled = False
         End If
+    End Sub
+
+    Private Sub BTNBUSQUEDAPROVINCIA_Click(sender As Object, e As EventArgs) Handles BTNBUSQUEDAPROVINCIA.Click
+        Dim provinciaElegida As String
+        Dim idProvinciaElegida As Integer
+
+
+        provinciaElegida = CBBUSQUEDAPROVINCIA.Text
+
+        idProvinciaElegida = convertirTextoEnID("IDPROVINCIA", "PROVINCIA", "PROVINCIA", provinciaElegida)
+
+        IDENTIFICACION.Text = idProvinciaElegida
+
+
+
+        REFRESCAR(L, "SELECT ID, IDENTIFICACION, NOMBRECOMPLETO, CONOCIDOCOMO, IDENTIFICACIONPADRE, NOMBREPADRE, IDENTIFICACIONMADRE, NOMBREMADRE, FECHANACIMIENTO, FOTO, IDNACIMIENTO, IDNACIONALIDAD, IDPROVINCIA, IDCANTON, IDDISTRITO  FROM CIUDADANOS WHERE IDPROVINCIA = " & idProvinciaElegida & "", 15)
     End Sub
 
     Private Sub btnNacionalidad_Click(sender As Object, e As EventArgs) Handles btnNacionalidad.Click

@@ -66,9 +66,23 @@ Partial Class ciudadanos
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader9 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader10 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader11 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader12 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader13 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader14 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader15 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.BUSCANDO = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.GBLUGARDEVOTACION = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.GBNACIONALIDAD = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.CBNACIONALIDAD = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.BtnSeleccionarNacionalidad = New Guna.UI2.WinForms.Guna2Button()
         Me.btnGuardarLugarVotacion = New Guna.UI2.WinForms.Guna2Button()
         Me.btnSeleccionarDistrito = New Guna.UI2.WinForms.Guna2Button()
         Me.btnSeleccionarCanton = New Guna.UI2.WinForms.Guna2Button()
@@ -79,9 +93,11 @@ Partial Class ciudadanos
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.GBNACIONALIDAD = New Guna.UI2.WinForms.Guna2GroupBox()
-        Me.CBNACIONALIDAD = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.BtnSeleccionarNacionalidad = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.BTNBUSQUEDAPROVINCIA = New Guna.UI2.WinForms.Guna2Button()
+        Me.CBBUSQUEDAPROVINCIA = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Guna2GroupBox1.SuspendLayout()
         CType(Me.FOTO, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBLUGARDENACIMIENTO.SuspendLayout()
@@ -126,7 +142,7 @@ Partial Class ciudadanos
         Me.Guna2GroupBox1.Controls.Add(Me.Label1)
         Me.Guna2GroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.Guna2GroupBox1.Location = New System.Drawing.Point(136, 12)
+        Me.Guna2GroupBox1.Location = New System.Drawing.Point(20, 12)
         Me.Guna2GroupBox1.Name = "Guna2GroupBox1"
         Me.Guna2GroupBox1.Size = New System.Drawing.Size(825, 485)
         Me.Guna2GroupBox1.TabIndex = 2
@@ -665,14 +681,14 @@ Partial Class ciudadanos
         'L
         '
         Me.L.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.L.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
+        Me.L.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10, Me.ColumnHeader11, Me.ColumnHeader12, Me.ColumnHeader13, Me.ColumnHeader14, Me.ColumnHeader15})
         Me.L.FullRowSelect = True
         Me.L.GridLines = True
         Me.L.HideSelection = False
-        Me.L.Location = New System.Drawing.Point(967, 136)
+        Me.L.Location = New System.Drawing.Point(851, 140)
         Me.L.MultiSelect = False
         Me.L.Name = "L"
-        Me.L.Size = New System.Drawing.Size(288, 248)
+        Me.L.Size = New System.Drawing.Size(426, 357)
         Me.L.TabIndex = 8
         Me.L.UseCompatibleStateImageBehavior = False
         Me.L.View = System.Windows.Forms.View.Details
@@ -684,18 +700,69 @@ Partial Class ciudadanos
         '
         'ColumnHeader2
         '
-        Me.ColumnHeader2.Text = "IDENTIFICACION"
+        Me.ColumnHeader2.Text = "Id"
         Me.ColumnHeader2.Width = 101
         '
         'ColumnHeader3
         '
-        Me.ColumnHeader3.Text = "NOMBRE DEL CIUDADANO"
-        Me.ColumnHeader3.Width = 185
+        Me.ColumnHeader3.Text = "Ciudadano"
         '
         'ColumnHeader4
         '
-        Me.ColumnHeader4.Text = "FOTO"
+        Me.ColumnHeader4.Text = "CONOCIDOCOMO"
         Me.ColumnHeader4.Width = 0
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "IDENTIFICACIONPADRE"
+        Me.ColumnHeader5.Width = 0
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "Padre"
+        '
+        'ColumnHeader7
+        '
+        Me.ColumnHeader7.Text = "IDENTIFICACIONMADRE"
+        Me.ColumnHeader7.Width = 0
+        '
+        'ColumnHeader8
+        '
+        Me.ColumnHeader8.Text = "Madre"
+        '
+        'ColumnHeader9
+        '
+        Me.ColumnHeader9.Text = "FECHANACIMIENTO"
+        Me.ColumnHeader9.Width = 0
+        '
+        'ColumnHeader10
+        '
+        Me.ColumnHeader10.Text = "FOTO"
+        Me.ColumnHeader10.Width = 0
+        '
+        'ColumnHeader11
+        '
+        Me.ColumnHeader11.Text = "IDNACIMIENTO"
+        Me.ColumnHeader11.Width = 0
+        '
+        'ColumnHeader12
+        '
+        Me.ColumnHeader12.Text = "IDNACIONALIDAD"
+        Me.ColumnHeader12.Width = 0
+        '
+        'ColumnHeader13
+        '
+        Me.ColumnHeader13.Text = "PROVINCIA"
+        '
+        'ColumnHeader14
+        '
+        Me.ColumnHeader14.Text = "IDCANTON"
+        Me.ColumnHeader14.Width = 0
+        '
+        'ColumnHeader15
+        '
+        Me.ColumnHeader15.Text = "IDDISTRITO"
+        Me.ColumnHeader15.Width = 0
         '
         'BUSCANDO
         '
@@ -710,10 +777,10 @@ Partial Class ciudadanos
         Me.BUSCANDO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.BUSCANDO.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BUSCANDO.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.BUSCANDO.Location = New System.Drawing.Point(1067, 101)
+        Me.BUSCANDO.Location = New System.Drawing.Point(992, 37)
         Me.BUSCANDO.Name = "BUSCANDO"
         Me.BUSCANDO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.BUSCANDO.PlaceholderText = "Digite el nombre del Ciudadano"
+        Me.BUSCANDO.PlaceholderText = ""
         Me.BUSCANDO.SelectedText = ""
         Me.BUSCANDO.Size = New System.Drawing.Size(188, 23)
         Me.BUSCANDO.TabIndex = 7
@@ -721,7 +788,7 @@ Partial Class ciudadanos
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(964, 104)
+        Me.Label15.Location = New System.Drawing.Point(858, 37)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(97, 13)
         Me.Label15.TabIndex = 6
@@ -729,6 +796,7 @@ Partial Class ciudadanos
         '
         'GBLUGARDEVOTACION
         '
+        Me.GBLUGARDEVOTACION.Controls.Add(Me.GBNACIONALIDAD)
         Me.GBLUGARDEVOTACION.Controls.Add(Me.btnGuardarLugarVotacion)
         Me.GBLUGARDEVOTACION.Controls.Add(Me.btnSeleccionarDistrito)
         Me.GBLUGARDEVOTACION.Controls.Add(Me.btnSeleccionarCanton)
@@ -747,6 +815,49 @@ Partial Class ciudadanos
         Me.GBLUGARDEVOTACION.TabIndex = 120
         Me.GBLUGARDEVOTACION.Text = "Lugar de votacion"
         Me.GBLUGARDEVOTACION.Visible = False
+        '
+        'GBNACIONALIDAD
+        '
+        Me.GBNACIONALIDAD.Controls.Add(Me.CBNACIONALIDAD)
+        Me.GBNACIONALIDAD.Controls.Add(Me.BtnSeleccionarNacionalidad)
+        Me.GBNACIONALIDAD.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.GBNACIONALIDAD.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.GBNACIONALIDAD.Location = New System.Drawing.Point(222, 253)
+        Me.GBNACIONALIDAD.Name = "GBNACIONALIDAD"
+        Me.GBNACIONALIDAD.Size = New System.Drawing.Size(465, 168)
+        Me.GBNACIONALIDAD.TabIndex = 119
+        Me.GBNACIONALIDAD.Text = "NACIONALIDAD"
+        Me.GBNACIONALIDAD.Visible = False
+        '
+        'CBNACIONALIDAD
+        '
+        Me.CBNACIONALIDAD.BackColor = System.Drawing.Color.Transparent
+        Me.CBNACIONALIDAD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CBNACIONALIDAD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CBNACIONALIDAD.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CBNACIONALIDAD.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CBNACIONALIDAD.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.CBNACIONALIDAD.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CBNACIONALIDAD.ItemHeight = 30
+        Me.CBNACIONALIDAD.Location = New System.Drawing.Point(80, 81)
+        Me.CBNACIONALIDAD.Name = "CBNACIONALIDAD"
+        Me.CBNACIONALIDAD.Size = New System.Drawing.Size(140, 36)
+        Me.CBNACIONALIDAD.TabIndex = 2
+        '
+        'BtnSeleccionarNacionalidad
+        '
+        Me.BtnSeleccionarNacionalidad.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BtnSeleccionarNacionalidad.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BtnSeleccionarNacionalidad.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BtnSeleccionarNacionalidad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BtnSeleccionarNacionalidad.Enabled = False
+        Me.BtnSeleccionarNacionalidad.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnSeleccionarNacionalidad.ForeColor = System.Drawing.Color.White
+        Me.BtnSeleccionarNacionalidad.Location = New System.Drawing.Point(244, 77)
+        Me.BtnSeleccionarNacionalidad.Name = "BtnSeleccionarNacionalidad"
+        Me.BtnSeleccionarNacionalidad.Size = New System.Drawing.Size(180, 45)
+        Me.BtnSeleccionarNacionalidad.TabIndex = 1
+        Me.BtnSeleccionarNacionalidad.Text = "Elegir"
         '
         'btnGuardarLugarVotacion
         '
@@ -881,55 +992,84 @@ Partial Class ciudadanos
         Me.Label16.TabIndex = 0
         Me.Label16.Text = "Provincia"
         '
-        'GBNACIONALIDAD
+        'Guna2TextBox1
         '
-        Me.GBNACIONALIDAD.Controls.Add(Me.CBNACIONALIDAD)
-        Me.GBNACIONALIDAD.Controls.Add(Me.BtnSeleccionarNacionalidad)
-        Me.GBNACIONALIDAD.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.GBNACIONALIDAD.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.GBNACIONALIDAD.Location = New System.Drawing.Point(54, 23)
-        Me.GBNACIONALIDAD.Name = "GBNACIONALIDAD"
-        Me.GBNACIONALIDAD.Size = New System.Drawing.Size(465, 168)
-        Me.GBNACIONALIDAD.TabIndex = 119
-        Me.GBNACIONALIDAD.Text = "NACIONALIDAD"
-        Me.GBNACIONALIDAD.Visible = False
+        Me.Guna2TextBox1.BorderRadius = 5
+        Me.Guna2TextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Guna2TextBox1.DefaultText = ""
+        Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.Guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.Guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2TextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2TextBox1.Location = New System.Drawing.Point(991, 66)
+        Me.Guna2TextBox1.Name = "Guna2TextBox1"
+        Me.Guna2TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Guna2TextBox1.PlaceholderText = ""
+        Me.Guna2TextBox1.SelectedText = ""
+        Me.Guna2TextBox1.Size = New System.Drawing.Size(188, 23)
+        Me.Guna2TextBox1.TabIndex = 122
         '
-        'CBNACIONALIDAD
+        'Label19
         '
-        Me.CBNACIONALIDAD.BackColor = System.Drawing.Color.Transparent
-        Me.CBNACIONALIDAD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.CBNACIONALIDAD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CBNACIONALIDAD.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CBNACIONALIDAD.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CBNACIONALIDAD.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.CBNACIONALIDAD.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.CBNACIONALIDAD.ItemHeight = 30
-        Me.CBNACIONALIDAD.Location = New System.Drawing.Point(80, 81)
-        Me.CBNACIONALIDAD.Name = "CBNACIONALIDAD"
-        Me.CBNACIONALIDAD.Size = New System.Drawing.Size(140, 36)
-        Me.CBNACIONALIDAD.TabIndex = 2
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(858, 73)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(127, 13)
+        Me.Label19.TabIndex = 121
+        Me.Label19.Text = "Nombre del Padre/Madre"
         '
-        'BtnSeleccionarNacionalidad
+        'Label20
         '
-        Me.BtnSeleccionarNacionalidad.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.BtnSeleccionarNacionalidad.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.BtnSeleccionarNacionalidad.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BtnSeleccionarNacionalidad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BtnSeleccionarNacionalidad.Enabled = False
-        Me.BtnSeleccionarNacionalidad.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.BtnSeleccionarNacionalidad.ForeColor = System.Drawing.Color.White
-        Me.BtnSeleccionarNacionalidad.Location = New System.Drawing.Point(244, 77)
-        Me.BtnSeleccionarNacionalidad.Name = "BtnSeleccionarNacionalidad"
-        Me.BtnSeleccionarNacionalidad.Size = New System.Drawing.Size(180, 45)
-        Me.BtnSeleccionarNacionalidad.TabIndex = 1
-        Me.BtnSeleccionarNacionalidad.Text = "Elegir"
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(858, 102)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(86, 13)
+        Me.Label20.TabIndex = 123
+        Me.Label20.Text = "Escoja Provincia"
+        '
+        'BTNBUSQUEDAPROVINCIA
+        '
+        Me.BTNBUSQUEDAPROVINCIA.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTNBUSQUEDAPROVINCIA.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTNBUSQUEDAPROVINCIA.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTNBUSQUEDAPROVINCIA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNBUSQUEDAPROVINCIA.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BTNBUSQUEDAPROVINCIA.ForeColor = System.Drawing.Color.White
+        Me.BTNBUSQUEDAPROVINCIA.Location = New System.Drawing.Point(1148, 101)
+        Me.BTNBUSQUEDAPROVINCIA.Name = "BTNBUSQUEDAPROVINCIA"
+        Me.BTNBUSQUEDAPROVINCIA.Size = New System.Drawing.Size(83, 31)
+        Me.BTNBUSQUEDAPROVINCIA.TabIndex = 125
+        Me.BTNBUSQUEDAPROVINCIA.Text = "Provincia"
+        '
+        'CBBUSQUEDAPROVINCIA
+        '
+        Me.CBBUSQUEDAPROVINCIA.BackColor = System.Drawing.Color.Transparent
+        Me.CBBUSQUEDAPROVINCIA.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CBBUSQUEDAPROVINCIA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CBBUSQUEDAPROVINCIA.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CBBUSQUEDAPROVINCIA.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CBBUSQUEDAPROVINCIA.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.CBBUSQUEDAPROVINCIA.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CBBUSQUEDAPROVINCIA.ItemHeight = 30
+        Me.CBBUSQUEDAPROVINCIA.Location = New System.Drawing.Point(993, 99)
+        Me.CBBUSQUEDAPROVINCIA.Name = "CBBUSQUEDAPROVINCIA"
+        Me.CBBUSQUEDAPROVINCIA.Size = New System.Drawing.Size(144, 36)
+        Me.CBBUSQUEDAPROVINCIA.TabIndex = 124
         '
         'ciudadanos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1299, 556)
-        Me.Controls.Add(Me.GBNACIONALIDAD)
+        Me.Controls.Add(Me.BTNBUSQUEDAPROVINCIA)
+        Me.Controls.Add(Me.CBBUSQUEDAPROVINCIA)
+        Me.Controls.Add(Me.Label20)
+        Me.Controls.Add(Me.Guna2TextBox1)
+        Me.Controls.Add(Me.Label19)
         Me.Controls.Add(Me.L)
         Me.Controls.Add(Me.GBLUGARDEVOTACION)
         Me.Controls.Add(Me.GBLUGARDENACIMIENTO)
@@ -1010,4 +1150,20 @@ Partial Class ciudadanos
     Friend WithEvents GBNACIONALIDAD As Guna.UI2.WinForms.Guna2GroupBox
     Friend WithEvents CBNACIONALIDAD As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents BtnSeleccionarNacionalidad As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents ColumnHeader5 As ColumnHeader
+    Friend WithEvents ColumnHeader6 As ColumnHeader
+    Friend WithEvents ColumnHeader7 As ColumnHeader
+    Friend WithEvents ColumnHeader8 As ColumnHeader
+    Friend WithEvents ColumnHeader9 As ColumnHeader
+    Friend WithEvents ColumnHeader10 As ColumnHeader
+    Friend WithEvents ColumnHeader11 As ColumnHeader
+    Friend WithEvents ColumnHeader12 As ColumnHeader
+    Friend WithEvents ColumnHeader13 As ColumnHeader
+    Friend WithEvents ColumnHeader14 As ColumnHeader
+    Friend WithEvents ColumnHeader15 As ColumnHeader
+    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents BTNBUSQUEDAPROVINCIA As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents CBBUSQUEDAPROVINCIA As Guna.UI2.WinForms.Guna2ComboBox
 End Class

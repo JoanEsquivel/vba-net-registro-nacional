@@ -93,4 +93,59 @@ Module CONEXION
         Return Contador
         Contador = 0
     End Function
+
+    Friend Sub REFRESCAR(ByRef L As ListView, ByVal SQL As String, ByVal CAMPOS As Integer)
+        Dim J As Integer
+        Dim IdProvinciaElegida As Integer
+        Dim ProvinciaEligida As String
+        Dim SQLProvincia As String
+        T.Tables.Clear()
+
+        L.Items.Clear()
+
+        CARGAR_TABLA(T, SQL)
+
+        If T.Tables(0).Rows.Count > 0 Then
+            For I = 0 To T.Tables(0).Rows.Count - 1
+                L.Items.Add(T.Tables(0).Rows(I).Item(0))
+                For J = 1 To CAMPOS - 1
+                    'If (J <> 2 And J <> 5 And J <> 7 And J <> 12) Then
+                    '    L.Columns(J).Width = 0
+                    'End If
+                    If (J = 12) Then
+
+                        IdProvinciaElegida = T.Tables(0).Rows(I).Item(J)
+
+                        'Obtener ID Provincia
+                        T2.Tables.Clear()
+                        SQLProvincia = "SELECT PROVINCIA from PROVINCIA WHERE IDPROVINCIA = " & IdProvinciaElegida & ""
+                        CARGAR_TABLA(T2, SQLProvincia)
+                        If T.Tables(0).Rows.Count > 0 Then
+                            ProvinciaEligida = T2.Tables(0).Rows(0).ItemArray(0)
+                        End If
+
+                        L.Items(L.Items.Count - 1).SubItems.Add(ProvinciaEligida)
+                    Else
+                        L.Items(L.Items.Count - 1).SubItems.Add(T.Tables(0).Rows(I).Item(J))
+                    End If
+
+                    'https://stackoverflow.com/questions/6233625/vb-net-adding-items-to-a-listview-along-with-tag-property
+                    'L.Items(L.Items.Count - 1).SubItems.Add(T.Tables(0).Rows(I).Item(J)).Tag
+                Next
+            Next
+            L.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent)
+            L.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize)
+            L.Columns(0).Width = 0
+            L.Columns(1).Width = 0
+            L.Columns(3).Width = 0
+            L.Columns(4).Width = 0
+            L.Columns(6).Width = 0
+            L.Columns(8).Width = 0
+            L.Columns(9).Width = 0
+            L.Columns(10).Width = 0
+            L.Columns(11).Width = 0
+            L.Columns(13).Width = 0
+            L.Columns(14).Width = 0
+        End If
+    End Sub
 End Module
