@@ -24,20 +24,25 @@ Partial Class cantones
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(cantones))
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.GBPROVINCIACANTON = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.CBProvinciaCantones = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.BTNProvinciaCantones = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnElegirProvinciaCantones = New Guna.UI2.WinForms.Guna2Button()
         Me.IDPROVINCIA = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Salir = New Guna.UI2.WinForms.Guna2Button()
         Me.GUARDAR = New Guna.UI2.WinForms.Guna2Button()
         Me.CANTON = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Guna2GroupBox1.SuspendLayout()
+        Me.GBPROVINCIACANTON.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2GroupBox1
         '
+        Me.Guna2GroupBox1.Controls.Add(Me.GBPROVINCIACANTON)
+        Me.Guna2GroupBox1.Controls.Add(Me.btnElegirProvinciaCantones)
         Me.Guna2GroupBox1.Controls.Add(Me.IDPROVINCIA)
         Me.Guna2GroupBox1.Controls.Add(Me.Label1)
-        Me.Guna2GroupBox1.Controls.Add(Me.Salir)
         Me.Guna2GroupBox1.Controls.Add(Me.GUARDAR)
         Me.Guna2GroupBox1.Controls.Add(Me.CANTON)
         Me.Guna2GroupBox1.Controls.Add(Me.Label2)
@@ -48,6 +53,62 @@ Partial Class cantones
         Me.Guna2GroupBox1.Size = New System.Drawing.Size(609, 284)
         Me.Guna2GroupBox1.TabIndex = 6
         Me.Guna2GroupBox1.Text = "Ingrese un canton"
+        '
+        'GBPROVINCIACANTON
+        '
+        Me.GBPROVINCIACANTON.Controls.Add(Me.CBProvinciaCantones)
+        Me.GBPROVINCIACANTON.Controls.Add(Me.BTNProvinciaCantones)
+        Me.GBPROVINCIACANTON.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.GBPROVINCIACANTON.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.GBPROVINCIACANTON.Location = New System.Drawing.Point(42, 18)
+        Me.GBPROVINCIACANTON.Name = "GBPROVINCIACANTON"
+        Me.GBPROVINCIACANTON.Size = New System.Drawing.Size(465, 168)
+        Me.GBPROVINCIACANTON.TabIndex = 119
+        Me.GBPROVINCIACANTON.Text = "Provincia"
+        Me.GBPROVINCIACANTON.Visible = False
+        '
+        'CBProvinciaCantones
+        '
+        Me.CBProvinciaCantones.BackColor = System.Drawing.Color.Transparent
+        Me.CBProvinciaCantones.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CBProvinciaCantones.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CBProvinciaCantones.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CBProvinciaCantones.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CBProvinciaCantones.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.CBProvinciaCantones.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CBProvinciaCantones.ItemHeight = 30
+        Me.CBProvinciaCantones.Location = New System.Drawing.Point(80, 81)
+        Me.CBProvinciaCantones.Name = "CBProvinciaCantones"
+        Me.CBProvinciaCantones.Size = New System.Drawing.Size(140, 36)
+        Me.CBProvinciaCantones.TabIndex = 2
+        '
+        'BTNProvinciaCantones
+        '
+        Me.BTNProvinciaCantones.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTNProvinciaCantones.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTNProvinciaCantones.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTNProvinciaCantones.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNProvinciaCantones.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BTNProvinciaCantones.ForeColor = System.Drawing.Color.White
+        Me.BTNProvinciaCantones.Location = New System.Drawing.Point(244, 77)
+        Me.BTNProvinciaCantones.Name = "BTNProvinciaCantones"
+        Me.BTNProvinciaCantones.Size = New System.Drawing.Size(180, 45)
+        Me.BTNProvinciaCantones.TabIndex = 1
+        Me.BTNProvinciaCantones.Text = "Elegir"
+        '
+        'btnElegirProvinciaCantones
+        '
+        Me.btnElegirProvinciaCantones.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnElegirProvinciaCantones.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnElegirProvinciaCantones.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnElegirProvinciaCantones.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnElegirProvinciaCantones.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnElegirProvinciaCantones.ForeColor = System.Drawing.Color.White
+        Me.btnElegirProvinciaCantones.Location = New System.Drawing.Point(309, 69)
+        Me.btnElegirProvinciaCantones.Name = "btnElegirProvinciaCantones"
+        Me.btnElegirProvinciaCantones.Size = New System.Drawing.Size(46, 24)
+        Me.btnElegirProvinciaCantones.TabIndex = 120
+        Me.btnElegirProvinciaCantones.Text = "..."
         '
         'IDPROVINCIA
         '
@@ -79,21 +140,6 @@ Partial Class cantones
         Me.Label1.TabIndex = 117
         Me.Label1.Text = "Provincia"
         '
-        'Salir
-        '
-        Me.Salir.BorderRadius = 5
-        Me.Salir.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Salir.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Salir.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Salir.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Salir.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Salir.ForeColor = System.Drawing.Color.White
-        Me.Salir.Location = New System.Drawing.Point(205, 170)
-        Me.Salir.Name = "Salir"
-        Me.Salir.Size = New System.Drawing.Size(89, 28)
-        Me.Salir.TabIndex = 116
-        Me.Salir.Text = "Salir"
-        '
         'GUARDAR
         '
         Me.GUARDAR.BorderRadius = 5
@@ -105,7 +151,7 @@ Partial Class cantones
         Me.GUARDAR.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.GUARDAR.ForeColor = System.Drawing.Color.White
         Me.GUARDAR.Image = CType(resources.GetObject("GUARDAR.Image"), System.Drawing.Image)
-        Me.GUARDAR.Location = New System.Drawing.Point(74, 170)
+        Me.GUARDAR.Location = New System.Drawing.Point(170, 175)
         Me.GUARDAR.Name = "GUARDAR"
         Me.GUARDAR.Size = New System.Drawing.Size(89, 28)
         Me.GUARDAR.TabIndex = 115
@@ -151,15 +197,19 @@ Partial Class cantones
         Me.Text = "cantones"
         Me.Guna2GroupBox1.ResumeLayout(False)
         Me.Guna2GroupBox1.PerformLayout()
+        Me.GBPROVINCIACANTON.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Guna2GroupBox1 As Guna.UI2.WinForms.Guna2GroupBox
-    Friend WithEvents Salir As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents GUARDAR As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents CANTON As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents IDPROVINCIA As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents btnElegirProvinciaCantones As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents GBPROVINCIACANTON As Guna.UI2.WinForms.Guna2GroupBox
+    Friend WithEvents CBProvinciaCantones As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents BTNProvinciaCantones As Guna.UI2.WinForms.Guna2Button
 End Class

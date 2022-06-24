@@ -490,7 +490,7 @@ Partial Class ciudadanos
         Me.FECHANACIMIENTO.Location = New System.Drawing.Point(165, 301)
         Me.FECHANACIMIENTO.Name = "FECHANACIMIENTO"
         Me.FECHANACIMIENTO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.FECHANACIMIENTO.PlaceholderText = "Ej 25/05/2000"
+        Me.FECHANACIMIENTO.PlaceholderText = "Ej 2000/09/05"
         Me.FECHANACIMIENTO.SelectedText = ""
         Me.FECHANACIMIENTO.Size = New System.Drawing.Size(188, 23)
         Me.FECHANACIMIENTO.TabIndex = 113

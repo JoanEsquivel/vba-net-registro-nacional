@@ -182,6 +182,13 @@
         '        GBLUGARDENACIMIENTO.Visible = False
         '    End If
         'End If
+
+        If e.KeyCode = 27 Then 'ESC = 27
+            GBLUGARDENACIMIENTO.Visible = False
+            GBLUGARDEVOTACION.Visible = False
+            GBNACIONALIDAD.Visible = False
+        End If
+
         If e.KeyCode = Keys.Delete And IDENTIFICACION.Tag <> 0 Then 'SUPRIMIR
             If MsgBox(“¿Desea eliminar al Ciudadano?", vbQuestion + vbYesNo, “Verifique") = vbYes Then
                 SQL = "DELETE FROM CIUDADANOS WHERE ID = " & IDENTIFICACION.Tag & ""

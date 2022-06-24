@@ -28,26 +28,36 @@ Partial Class distritos
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PROVINCIA = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Salir = New Guna.UI2.WinForms.Guna2Button()
         Me.GUARDAR = New Guna.UI2.WinForms.Guna2Button()
         Me.CANTON = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.GBProvinciaDistrito = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.CBProvinciaDistritos = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.BTNProvinciaDistritos = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnElegirProvinciaDistrito = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnElegirCantonDistrito = New Guna.UI2.WinForms.Guna2Button()
+        Me.GBCantonDistrito = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.CBCantonDistrito = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.BTNCantonDistrito = New Guna.UI2.WinForms.Guna2Button()
         Me.DISTRITOGP.SuspendLayout()
+        Me.GBProvinciaDistrito.SuspendLayout()
+        Me.GBCantonDistrito.SuspendLayout()
         Me.SuspendLayout()
         '
         'DISTRITOGP
         '
+        Me.DISTRITOGP.Controls.Add(Me.btnElegirCantonDistrito)
+        Me.DISTRITOGP.Controls.Add(Me.btnElegirProvinciaDistrito)
         Me.DISTRITOGP.Controls.Add(Me.DISTRITO)
         Me.DISTRITOGP.Controls.Add(Me.Label3)
         Me.DISTRITOGP.Controls.Add(Me.PROVINCIA)
         Me.DISTRITOGP.Controls.Add(Me.Label1)
-        Me.DISTRITOGP.Controls.Add(Me.Salir)
         Me.DISTRITOGP.Controls.Add(Me.GUARDAR)
         Me.DISTRITOGP.Controls.Add(Me.CANTON)
         Me.DISTRITOGP.Controls.Add(Me.Label2)
         Me.DISTRITOGP.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.DISTRITOGP.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.DISTRITOGP.Location = New System.Drawing.Point(12, 12)
+        Me.DISTRITOGP.Location = New System.Drawing.Point(203, 48)
         Me.DISTRITOGP.Name = "DISTRITOGP"
         Me.DISTRITOGP.Size = New System.Drawing.Size(487, 266)
         Me.DISTRITOGP.TabIndex = 7
@@ -113,21 +123,6 @@ Partial Class distritos
         Me.Label1.TabIndex = 119
         Me.Label1.Text = "Provincia"
         '
-        'Salir
-        '
-        Me.Salir.BorderRadius = 5
-        Me.Salir.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Salir.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Salir.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Salir.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Salir.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Salir.ForeColor = System.Drawing.Color.White
-        Me.Salir.Location = New System.Drawing.Point(182, 183)
-        Me.Salir.Name = "Salir"
-        Me.Salir.Size = New System.Drawing.Size(89, 28)
-        Me.Salir.TabIndex = 116
-        Me.Salir.Text = "Salir"
-        '
         'GUARDAR
         '
         Me.GUARDAR.BorderRadius = 5
@@ -174,22 +169,137 @@ Partial Class distritos
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Canton:"
         '
+        'GBProvinciaDistrito
+        '
+        Me.GBProvinciaDistrito.Controls.Add(Me.CBProvinciaDistritos)
+        Me.GBProvinciaDistrito.Controls.Add(Me.BTNProvinciaDistritos)
+        Me.GBProvinciaDistrito.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.GBProvinciaDistrito.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.GBProvinciaDistrito.Location = New System.Drawing.Point(12, 28)
+        Me.GBProvinciaDistrito.Name = "GBProvinciaDistrito"
+        Me.GBProvinciaDistrito.Size = New System.Drawing.Size(465, 168)
+        Me.GBProvinciaDistrito.TabIndex = 120
+        Me.GBProvinciaDistrito.Text = "Provincia"
+        Me.GBProvinciaDistrito.Visible = False
+        '
+        'CBProvinciaDistritos
+        '
+        Me.CBProvinciaDistritos.BackColor = System.Drawing.Color.Transparent
+        Me.CBProvinciaDistritos.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CBProvinciaDistritos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CBProvinciaDistritos.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CBProvinciaDistritos.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CBProvinciaDistritos.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.CBProvinciaDistritos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CBProvinciaDistritos.ItemHeight = 30
+        Me.CBProvinciaDistritos.Location = New System.Drawing.Point(80, 81)
+        Me.CBProvinciaDistritos.Name = "CBProvinciaDistritos"
+        Me.CBProvinciaDistritos.Size = New System.Drawing.Size(140, 36)
+        Me.CBProvinciaDistritos.TabIndex = 2
+        '
+        'BTNProvinciaDistritos
+        '
+        Me.BTNProvinciaDistritos.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTNProvinciaDistritos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTNProvinciaDistritos.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTNProvinciaDistritos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNProvinciaDistritos.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BTNProvinciaDistritos.ForeColor = System.Drawing.Color.White
+        Me.BTNProvinciaDistritos.Location = New System.Drawing.Point(244, 77)
+        Me.BTNProvinciaDistritos.Name = "BTNProvinciaDistritos"
+        Me.BTNProvinciaDistritos.Size = New System.Drawing.Size(180, 45)
+        Me.BTNProvinciaDistritos.TabIndex = 1
+        Me.BTNProvinciaDistritos.Text = "Elegir"
+        '
+        'btnElegirProvinciaDistrito
+        '
+        Me.btnElegirProvinciaDistrito.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnElegirProvinciaDistrito.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnElegirProvinciaDistrito.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnElegirProvinciaDistrito.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnElegirProvinciaDistrito.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnElegirProvinciaDistrito.ForeColor = System.Drawing.Color.White
+        Me.btnElegirProvinciaDistrito.Location = New System.Drawing.Point(298, 75)
+        Me.btnElegirProvinciaDistrito.Name = "btnElegirProvinciaDistrito"
+        Me.btnElegirProvinciaDistrito.Size = New System.Drawing.Size(46, 24)
+        Me.btnElegirProvinciaDistrito.TabIndex = 121
+        Me.btnElegirProvinciaDistrito.Text = "..."
+        '
+        'btnElegirCantonDistrito
+        '
+        Me.btnElegirCantonDistrito.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnElegirCantonDistrito.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnElegirCantonDistrito.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnElegirCantonDistrito.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnElegirCantonDistrito.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnElegirCantonDistrito.ForeColor = System.Drawing.Color.White
+        Me.btnElegirCantonDistrito.Location = New System.Drawing.Point(298, 114)
+        Me.btnElegirCantonDistrito.Name = "btnElegirCantonDistrito"
+        Me.btnElegirCantonDistrito.Size = New System.Drawing.Size(46, 24)
+        Me.btnElegirCantonDistrito.TabIndex = 123
+        Me.btnElegirCantonDistrito.Text = "..."
+        '
+        'GBCantonDistrito
+        '
+        Me.GBCantonDistrito.Controls.Add(Me.CBCantonDistrito)
+        Me.GBCantonDistrito.Controls.Add(Me.BTNCantonDistrito)
+        Me.GBCantonDistrito.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.GBCantonDistrito.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.GBCantonDistrito.Location = New System.Drawing.Point(12, 202)
+        Me.GBCantonDistrito.Name = "GBCantonDistrito"
+        Me.GBCantonDistrito.Size = New System.Drawing.Size(465, 168)
+        Me.GBCantonDistrito.TabIndex = 122
+        Me.GBCantonDistrito.Text = "Canton"
+        Me.GBCantonDistrito.Visible = False
+        '
+        'CBCantonDistrito
+        '
+        Me.CBCantonDistrito.BackColor = System.Drawing.Color.Transparent
+        Me.CBCantonDistrito.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CBCantonDistrito.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CBCantonDistrito.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CBCantonDistrito.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CBCantonDistrito.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.CBCantonDistrito.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CBCantonDistrito.ItemHeight = 30
+        Me.CBCantonDistrito.Location = New System.Drawing.Point(80, 81)
+        Me.CBCantonDistrito.Name = "CBCantonDistrito"
+        Me.CBCantonDistrito.Size = New System.Drawing.Size(140, 36)
+        Me.CBCantonDistrito.TabIndex = 2
+        '
+        'BTNCantonDistrito
+        '
+        Me.BTNCantonDistrito.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTNCantonDistrito.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTNCantonDistrito.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTNCantonDistrito.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNCantonDistrito.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BTNCantonDistrito.ForeColor = System.Drawing.Color.White
+        Me.BTNCantonDistrito.Location = New System.Drawing.Point(244, 77)
+        Me.BTNCantonDistrito.Name = "BTNCantonDistrito"
+        Me.BTNCantonDistrito.Size = New System.Drawing.Size(180, 45)
+        Me.BTNCantonDistrito.TabIndex = 1
+        Me.BTNCantonDistrito.Text = "Elegir"
+        '
         'distritos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(510, 307)
+        Me.ClientSize = New System.Drawing.Size(863, 408)
+        Me.Controls.Add(Me.GBCantonDistrito)
+        Me.Controls.Add(Me.GBProvinciaDistrito)
         Me.Controls.Add(Me.DISTRITOGP)
         Me.Name = "distritos"
         Me.Text = "distritos"
         Me.DISTRITOGP.ResumeLayout(False)
         Me.DISTRITOGP.PerformLayout()
+        Me.GBProvinciaDistrito.ResumeLayout(False)
+        Me.GBCantonDistrito.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents DISTRITOGP As Guna.UI2.WinForms.Guna2GroupBox
-    Friend WithEvents Salir As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents GUARDAR As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents CANTON As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label2 As Label
@@ -197,4 +307,12 @@ Partial Class distritos
     Friend WithEvents Label3 As Label
     Friend WithEvents PROVINCIA As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents GBProvinciaDistrito As Guna.UI2.WinForms.Guna2GroupBox
+    Friend WithEvents CBProvinciaDistritos As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents BTNProvinciaDistritos As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnElegirCantonDistrito As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnElegirProvinciaDistrito As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents GBCantonDistrito As Guna.UI2.WinForms.Guna2GroupBox
+    Friend WithEvents CBCantonDistrito As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents BTNCantonDistrito As Guna.UI2.WinForms.Guna2Button
 End Class

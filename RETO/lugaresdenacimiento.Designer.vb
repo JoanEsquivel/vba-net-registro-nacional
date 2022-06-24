@@ -24,7 +24,6 @@ Partial Class lugaresdenacimiento
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(lugaresdenacimiento))
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
-        Me.Salir = New Guna.UI2.WinForms.Guna2Button()
         Me.GUARDAR = New Guna.UI2.WinForms.Guna2Button()
         Me.LUGARDENACIMIENTO = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -33,7 +32,6 @@ Partial Class lugaresdenacimiento
         '
         'Guna2GroupBox1
         '
-        Me.Guna2GroupBox1.Controls.Add(Me.Salir)
         Me.Guna2GroupBox1.Controls.Add(Me.GUARDAR)
         Me.Guna2GroupBox1.Controls.Add(Me.LUGARDENACIMIENTO)
         Me.Guna2GroupBox1.Controls.Add(Me.Label2)
@@ -44,21 +42,6 @@ Partial Class lugaresdenacimiento
         Me.Guna2GroupBox1.Size = New System.Drawing.Size(487, 191)
         Me.Guna2GroupBox1.TabIndex = 3
         Me.Guna2GroupBox1.Text = "Ingrese un lugar de nacimiento"
-        '
-        'Salir
-        '
-        Me.Salir.BorderRadius = 5
-        Me.Salir.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Salir.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Salir.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Salir.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Salir.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Salir.ForeColor = System.Drawing.Color.White
-        Me.Salir.Location = New System.Drawing.Point(186, 117)
-        Me.Salir.Name = "Salir"
-        Me.Salir.Size = New System.Drawing.Size(89, 28)
-        Me.Salir.TabIndex = 116
-        Me.Salir.Text = "Salir"
         '
         'GUARDAR
         '
@@ -71,7 +54,7 @@ Partial Class lugaresdenacimiento
         Me.GUARDAR.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.GUARDAR.ForeColor = System.Drawing.Color.White
         Me.GUARDAR.Image = CType(resources.GetObject("GUARDAR.Image"), System.Drawing.Image)
-        Me.GUARDAR.Location = New System.Drawing.Point(70, 117)
+        Me.GUARDAR.Location = New System.Drawing.Point(164, 116)
         Me.GUARDAR.Name = "GUARDAR"
         Me.GUARDAR.Size = New System.Drawing.Size(89, 28)
         Me.GUARDAR.TabIndex = 115
@@ -122,7 +105,6 @@ Partial Class lugaresdenacimiento
     End Sub
 
     Friend WithEvents Guna2GroupBox1 As Guna.UI2.WinForms.Guna2GroupBox
-    Friend WithEvents Salir As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents GUARDAR As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents LUGARDENACIMIENTO As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label2 As Label
